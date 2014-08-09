@@ -3,5 +3,21 @@
  "http://java.sun.com/dtd/web-app_2_5.dtd" >
 
 <web-app>
-  <display-name>UID Web Application</display-name>
+	<display-name>UID Web Application</display-name>
+	<servlet>
+		<servlet-name>getEntropy</servlet-name>
+		<servlet-class>servlets.GetEntropy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getEntropy</servlet-name>
+		<url-pattern>/getEntropy.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>getCorpusGraph</servlet-name>
+		<servlet-class>servlets.GetCorpusGraph</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getCorpusGraph</servlet-name>
+		<url-pattern>/getCorpusGraph.do</url-pattern>
+	</servlet-mapping>
 </web-app>

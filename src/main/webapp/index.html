@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UID Website</title>
+
+
+<!-- Javascript -->
+<script type="text/javascript" src="lib/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="lib/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="lib/jquery.qtip.js"></script>
+<script type="text/javascript" src="lib/d3.v3.js"></script>
+<script type="text/javascript" src="lib/uid.js"></script>
+
+<!-- stylesheets -->
+<link rel="stylesheet" type="text/css" href="css/uid.css" />
+
+</head>
+<body>
+
+	<div id="header">
+		<div class="logo">Uniform Information Density</div>
+
+	</div>
+
+	<div id="main" align="center">
+
+		<div id="samples" align="center">
+			<h2>Sample Corpora</h2>
+			<br>
+			<div class="sampleButton inactive" id="corps">CORPS</div>
+			<div class="sampleButton inactive" id="europa">EUROPA</div>
+			<div class="sampleButton inactive" id="wsjTrain">WSJ</div>
+			<br> <br>
+		</div>
+		<br>
+		<div id="timeline">
+			<h1>Graph will be shown here...</h1>
+		</div>
+
+		<br>
+
+		<div id="multiSelection" style="border: 1px solid lightgray">
+			<br> <label for="windowSize">Select Window Size (average
+				of consecutive values): </label> <select id="windowSize">
+				<option value="1" selected="selected">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+			</select><br> <br> <label for="topHL">Number of streaks
+				(steepest window of values):</label> <input type="text" id="topHL" value="1" /> <br>
+			<br> <label for="corpus">Which corpus: </label> <select
+				id="corpus">
+				<option value="corps">CORPS</option>
+				<option value="europa">EUROPA</option>
+				<option value="wsjTrain" selected="selected">WSJ</option>
+				<option value="all">ALL</option>
+			</select> <br> <br> <label for="LM">Which language model: </label> <select
+				id="LM">
+				<option value="berkeley">Berkeley</option>
+				<option value="kylm" selected="selected">Kylm</option>
+			</select><br> <br>
+		</div>
+		<br>
+		<div id="notations" style='border: 1px solid lightgray;'>
+			<br>
+			<h2>NOTATIONS (these lines are built on KYLM):</h2>
+			<h3>Window Size: average score of N sentences</h3>
+			<h3>Usage: Select your options, and click a button to calculate</h3>
+			<h3>
+				<font color='red'>Red line: max entropy</font>
+			</h3>
+			<h3>
+				<font color='maroon'>Maroon line: average entropy + standard
+					deviation</font>
+			</h3>
+			<h3>
+				<font color='green'>Green line: average entropy (important)</font>
+			</h3>
+			<h3>
+				<font color='orange'>Orange line: average entropy -standard
+					deviation</font>
+			</h3>
+			<h3>
+				<font color='blue'>Blue line: min entropy</font>
+			</h3>
+		</div>
+
+
+		<div id="entropyFormArea">
+			<br>
+			<h2>Enter a speech/document to calculate entropy:</h2>
+			<br> <label for="inputTextArea">TEXT:</label>
+			<textarea id="inputTextArea"></textarea>
+			<br> <br> <input id="getEntropyButton" type="button"
+				value="Get Entropy" />
+		</div>
+		<br>
+		<h2>STATISTICS:</h2>
+		<label for="longestStreak">Longest Streak: </label>
+		<h2 id="longestStreak"></h2>
+		<br>
+		<div id="document"></div>
+		<br>
+		<h2>Entropy Score Table</h2>
+		<br>
+		<div id="outputArea"></div>
+		
+	</div>
+
+
+</body>
+</html>

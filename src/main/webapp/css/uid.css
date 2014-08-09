@@ -1,0 +1,258 @@
+/*------------------------------------*\
+	RESET
+\*------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 101%;
+	background: #787878;
+	padding: 0;
+	margin: 0;
+	outline: 0;
+}
+
+body {
+	background: #787878;
+	font-family: Verdana, Tahoma, Arial, Microsoft Sans Serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #333333;
+	left: 500px;
+	width: 1030px;
+	padding: 0px 0px 0px 0px;
+	margin: 20px auto;
+	min-width: 1030px;
+}
+
+input,textarea,select {
+	font-size: 12px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+table {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	background: #fff;
+	margin: 5px;
+	width: 100%;
+	table-layout: fixed;
+	text-align: left;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+table th {
+	padding: 8px;
+	font-weight: normal;
+	font-size: 14px;
+	color: #222222;
+	background: #C8DADA;
+}
+
+table td {
+	padding: 8px;
+	background: #F2F6F6;
+	border-top: 1px solid #fff;
+	color: #222222;
+}
+
+#entropyTable td.entropyCell,#entropyTable th.entropyCell {
+	width: 100px;
+}
+
+#entropyTable thead {
+	cursor: pointer;
+}
+
+#entropyTable thead tr th.headerSortUp,#entropyTable thead tr th.headerSortDown
+	{
+	background: #acc8dd;
+}
+
+#entropyTable thead tr th.headerSortUp span {
+	background-image: url('images/up-arrow.png');
+}
+
+#entropyTable thead tr th.headerSortDown span {
+	background-image: url('images/down-arrow.png');
+}
+
+#document{
+	text-align:left;
+	padding-left:20px;
+}
+#document, #entropyFormArea, #samples, #outputArea {
+	max-width: 1000px;
+	border: 1px solid lightgray;
+}
+
+#header {
+	height: 90px;
+	color: white;
+	background: steelblue;
+	-moz-border-radius-topleft: 20px;
+	border-top-left-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	border-top-right-radius: 20px;
+}
+
+.logo {
+	padding: 36px 0px 0px 0px;
+	font-size: 48px;
+	text-align: center;
+	cursor: hand;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#main {
+	width: 100%;
+	background: white;
+	padding: 50px 0px 40px 0px;
+}
+
+#main h3 {
+	padding-bottom: 10px;
+}
+
+#main p {
+	padding-bottom: 15px;
+}
+
+#footer {
+	height: 120px;
+	border-top: 1px solid #cccccc; /*#ed880c;*/
+	background-color: white;
+	color: steelblue;
+	-moz-border-radius-bottomleft: 20px;
+	border-bottom-left-radius: 20px;
+	-moz-border-radius-bottomright: 20px;
+	border-bottom-right-radius: 20px;
+}
+
+#footer .content {
+	padding-top: 20px;
+}
+
+#inputTextArea{
+	width:500px;
+	height:200px;
+}
+.sampleButton {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px double rgb(110, 44, 106);
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 5px;
+	padding: 4px 18px;
+	height: 20px;
+	width: 55px;
+	/*text-transform: uppercase;*/
+	background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+	background-image: linear-gradient(top, rgba(0, 0, 0, 0),
+		rgba(0, 0, 0, 0.2));
+}
+
+.sampleButton:hover {
+	background: rgb(110, 44, 106);
+	color: white;
+}
+
+.active {
+	background: rgb(110, 44, 106);
+	color: white;
+}
+
+.inactive {
+	background: white;
+	color: rgb(110, 44, 106);
+}
+
+/*******TIMELINE********/
+path.entropyLine {
+	stroke: rgb(110, 44, 106);
+	stroke-width: 2;
+	fill: none;
+}
+
+path.averageLine {
+	stroke: steelblue;
+	stroke-width: 4;
+	fill: none;
+}
+
+path.measureLine {
+	stroke: lightgray;
+	stroke-width: 1;
+	fill: none;
+}
+path.avgELine {
+	stroke: green;
+	stroke-width: 1;
+	fill: none;
+}
+path.minELine {
+	stroke: blue;
+	stroke-width: 1;
+	fill: none;
+}
+path.maxELine {
+	stroke: red;
+	stroke-width: 1;
+	fill: none;
+}
+path.lowerELine {
+	stroke: orange;
+	stroke-width: 1;
+	fill: none;
+}
+path.upperELine {
+	stroke: maroon;
+	stroke-width: 1;
+	fill: none;
+}
+
+.axis path,.axis line {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+div.tooltip { /* set the CSS for tooltip divs */
+	position: absolute; /* reference for measurement */
+	text-align: center; /* align the text to the center */
+	width: auto; /* set the width of the rectangle */
+	height: auto; /* set the height of the rectangle */
+	padding: 5px; /* set a border around the rectangle */
+	font: 12px sans-serif; /* set the font type for the tooltips */
+	color: white;
+	background: rgb(110, 44, 106);
+	/* set the colour of the rectangle */
+	border: 1px solid rgb(110, 44, 106); /* turn off the border (0px) */
+	border-radius: 8px; /* set how rounded the edges of the rectangle is */
+	pointer-events: none;
+	margin-left: 10px;
+	margin-top: 10px;
+	background: rgb(110, 44, 106);
+	/* 'none' tells the mouse to ignore the rectangle */
+}

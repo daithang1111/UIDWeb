@@ -1,0 +1,57 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+}
+
+.axis path,.axis line {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+	fill: #787878;
+}
+
+path.measureLine {
+	stroke: lightgray;
+	stroke-width: 0.5;
+	fill: none;
+}
+
+svg{
+	position:absolute;
+}
+
+.main{
+	background-color: beige;
+}
+.left, .right, .top, .bottom{
+	background-color:#fff;
+	display:none;
+}
+.dist{
+}
+
+div.tooltip { /* set the CSS for tooltip divs */
+	position: absolute; /* reference for measurement */
+	text-align: center; /* align the text to the center */
+	width: auto; /* set the width of the rectangle */
+	height: auto; /* set the height of the rectangle */
+	padding: 5px; /* set a border around the rectangle */
+	font: 12px sans-serif; /* set the font type for the tooltips */
+	color: white;
+	background: rgb(110, 44, 106);
+	/* set the colour of the rectangle */
+	border: 1px solid rgb(110, 44, 106); /* turn off the border (0px) */
+	border-radius: 8px; /* set how rounded the edges of the rectangle is */
+	pointer-events: none;
+	margin-left: 10px;
+	margin-top: 10px;
+	background: rgb(110, 44, 106);
+	z-index:10000;
+	/* 'none' tells the mouse to ignore the rectangle */
+}

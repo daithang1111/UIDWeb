@@ -6,7 +6,7 @@
 	<display-name>UID Web Application</display-name>
 	<servlet>
 		<servlet-name>getEntropy</servlet-name>
-		<servlet-class>servlets.GetEntropy</servlet-class>
+		<servlet-class>uid.servlets.GetEntropy</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>getEntropy</servlet-name>
@@ -14,7 +14,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>getCorpusGraph</servlet-name>
-		<servlet-class>servlets.GetCorpusGraph</servlet-class>
+		<servlet-class>uid.servlets.GetCorpusGraph</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>getCorpusGraph</servlet-name>
